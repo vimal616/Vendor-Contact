@@ -1,0 +1,78 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<nav class="navbar" style="background-color: white; height: 60px;">
+        <a class="navbar-brand" >
+                <img src="assets/img/logo.webp" width="50" height="50" class="d-inline-block align-top" alt="">
+                 &nbsp;<b>UST</b>
+        </a>
+</nav>
+
+<nav class="navbar" style="background-color: rgb(100, 100, 206); height: 70px;">
+
+        
+        
+</nav>
+
+<div class="jumbotron" style="background-color:rgb(227, 251, 253); ">
+<div class="container">
+
+<h1 class="d-flex justify-content-center">VENDOR DETAILS</h1><br><br>
+
+
+
+  
+                <input [(ngModel)] ="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button (click)="searchVendor(search)"  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                
+                <button (click)=addvendor()  class="btn btn-outline-success my-2 my-sm-0">New Record</button>
+                <button (click)=logout()  class="btn btn-outline-success my-2 my-sm-0">Logout</button>
+                <br>
+     
+
+      
+      <div ng-app="myApp" ng-controller="myController">
+               
+<div>
+        <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                        <th> Id</th>
+                        <th>Vendor Name</th>
+                        <th>Address</th>
+                        <th>Location</th>
+                        <th>Service</th>
+                        <th>Pin</th>
+                        <th>Trainer</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                        <th>Disable</th>
+                        
+                    </tr>
+                    </thead>
+                    
+                    
+                            <tr *ngFor="let vendor of vendors">
+                                    <td>{{vendor.id}}</td>
+                                    <td>{{vendor.vendorName}}</td>
+                                    <td>{{vendor.address}}</td>
+                                    <td>{{vendor.location}}</td>
+                                    <td>{{vendor.service}}</td>
+                                    <td>{{vendor.pin}}</td>
+                                    <td>{{vendor.name}}</td>
+                                    <td>{{vendor.department}}</td>
+                                    <td>{{vendor.email}}</td>
+                                    <td>{{vendor.phone}}</td>
+
+                                     <button (click)=edit(vendor.id) class="btn btn-outline-success my-2 my-sm-0">Edit</button>
+                                        <td><button (click) =disable(vendor.id) class="btn btn-outline-success my-2 my-sm-0">Disable</button>
+                            </tr>          
+            </table>
+        </div>
+</div>
+</div>
+</div>
+

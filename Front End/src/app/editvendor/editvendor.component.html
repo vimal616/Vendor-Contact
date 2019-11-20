@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<nav class="navbar" style="background-color: white; height: 60px;">
+    <a class="navbar-brand">
+        <img src="assets/img/logo.webp" width="50" height="50" class="d-inline-block align-top" alt="">
+        &nbsp;<b>UST</b>
+    </a>
+</nav>
+
+<nav class="navbar" style="background-color: rgb(100, 100, 206); height: 70px;">
+
+    
+
+</nav>
+
+<div class="jumbotron" style="background-color:rgb(227, 251, 253); ">
+    <div class="container">
+
+        <br><br><br>
+        <div>
+            <section id="cover">
+                <form>
+                    <input type="hidden" name="patient.regId" />
+                    
+                        Enter Vendor Name <input type="text" class="form-control" [(ngModel)]="vendor.vendorName"
+                            name="vendorName" /><br />
+                    
+                   
+                        Enter Address: <input type="text" class="form-control" [(ngModel)]="vendor.address"
+                            name="address" /><br />
+                        <label for="form-control" class="col-2 col-form-label"> </label>
+                            
+                        <br>
+
+                        <div class="drop-down">
+                            <label>Enter location: </label>
+                            <select class="form-control" [(ngModel)]="vendor.location" name="location">
+                                <option value="trivandrum">Trivandrum</option>
+                                <option value="chennai">Chennai</option>
+                                <option value="banglore">banglore</option>
+
+                            </select>
+                        </div>
+                        <br>
+
+                        Enter service: <input type="text" class="form-control" [(ngModel)]="vendor.service"
+                            name="service" /><br />
+                        Enter pin: <input type="text" class="form-control" [(ngModel)]="vendor.pin" name="pin" /><br />
+                        Enter trainer name: <input type="text" class="form-control" [(ngModel)]="vendor.name"
+                            name="name" /><br />
+                        Enter department: <input type="text" class="form-control" [(ngModel)]="vendor.department"
+                            name="department" /><br />
+                        Enter email: <input type="text" class="form-control" [(ngModel)]="vendor.email"
+                            name="email" /><br />
+                        Enter phone: <input type="text" class="form-control" [(ngModel)]="vendor.phone"
+                            name="phone" /><br />
+
+
+                        <button (click)="updateRecord()">Add Record</button>
+                        <br><br>
+                </form>
+            </section>
+
+
+        </div>
+    </div>
+    </div>
